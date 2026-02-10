@@ -1,0 +1,6 @@
+transformers
+torch
+openai
+vllm
+ray
+tqdm
