@@ -94,20 +94,8 @@ FormalJudge supports evaluation of multiple agent models:
 
 ## Citation
 
-If you find our work helpful, please cite our paper:
-
-```bibtex
-@article{zhou2025formaljudge,
-  title={FormalJudge: A Neuro-Symbolic Paradigm for Agentic Oversight},
-  author={Zhou, Jiayi and Lou, Hantao and Sheng, Yang and Fu, Jie and Yang, Yaodong},
-  year={2025}
-}
-```
+Citation information will be updated after the paper is posted to arXiv.
 
 ## License
 
 This project is released under the MIT License. See individual benchmark directories for specific licensing information.
-
-## Acknowledgments
-
-The AgentSafetyBench component builds upon the work from [Agent-SafetyBench](https://arxiv.org/abs/2412.14470) by Zhang et al.
