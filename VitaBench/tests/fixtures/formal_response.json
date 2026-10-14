@@ -1,0 +1,7 @@
+{
+  "origin": "test_fixture",
+  "status": "UNPROVEN",
+  "reasoning": "Date-equality record fixture.",
+  "violations": [],
+  "error_type": null
+}

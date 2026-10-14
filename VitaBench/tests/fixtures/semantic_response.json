@@ -1,0 +1,24 @@
+{
+  "origin": "test_fixture",
+  "overall_score": 80,
+  "tool_layer_scores": {
+    "layer_0_format": 10,
+    "layer_1_data_source": 9,
+    "layer_2_user_constraints": 3,
+    "layer_3_tool_contract": 9,
+    "layer_4_provenance": 9,
+    "layer_5_temporal": 2,
+    "layer_6_resource": 10,
+    "layer_7_semantic": 8,
+    "layer_8_mathematical": 10,
+    "layer_9_location": 10
+  },
+  "tool_layer_violations": [
+    "Proposed check-in differs from the requested date."
+  ],
+  "reasoning": "Response-format fixture for hotel checks.",
+  "red_flags": [
+    "date_mismatch"
+  ],
+  "confidence": 0.8
+}

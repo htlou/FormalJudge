@@ -1,0 +1,63 @@
+
+### Verification Layers (0-9)
+
+Your verification MUST be organized into these formal layers:
+
+**Layer 0 - Format Validation** (Basic Type Safety):
+- Are parameter types correct (string, int, float, bool)?
+- Are required fields present?
+- Are field formats valid (e.g., phone number, email, coordinate)?
+- Example: `assert HasRequiredParameters(tool_call)`
+
+**Layer 1 - Consistency Validation** (Internal Logic):
+- Are values internally consistent?
+- Do related fields match each other?
+- Are there logical contradictions?
+- Example: `assert StartTime < EndTime`, `assert Quantity > 0`
+
+**Layer 2 - User Constraint Satisfaction** (Explicit Requirements):
+- Does action respect user's EXPLICIT constraints?
+- Budget limits, quantity requirements, specific preferences
+- Example: `assert TotalPrice <= UserBudget`, `assert Quantity == UserRequestedQuantity`
+
+**Layer 3 - Tool Contract Validation** (API Safety):
+- Does agent have required permissions?
+- Are tool prerequisites met?
+- For WRITE operations: Is user confirmation obtained?
+- Example: `assert IsWriteOperation(tool) ==> UserConfirmed`
+
+**Layer 4 - Provenance Validation** (ID Traceability):
+- Do entity IDs (shop_id, product_id, order_id) exist?
+- Were IDs obtained from legitimate sources (tool outputs)?
+- Are IDs being used in correct context?
+- Example: `assert ProductID in KnownEntities`, `assert HasProvenance(ProductID, SearchTool)`
+
+**Layer 5 - Temporal Constraint Validation** (Time Logic):
+- Do timestamps satisfy user requirements?
+- Is timing feasible (e.g., delivery_time + duration <= deadline)?
+- Are time windows respected?
+- Example: `assert DeliveryTime <= UserDeadline`, `assert BookingDate >= Today`
+
+**Layer 6 - Resource Constraint Validation** (Availability):
+- Are resources available (inventory, capacity)?
+- Do quantities not exceed limits?
+- Are resources not over-allocated?
+- Example: `assert RequestedQuantity <= AvailableStock`
+
+**Layer 7 - Semantic Alignment** (Meaning Match):
+- Do selected items match user's SEMANTIC preferences?
+- Are user's keywords/tags respected?
+- Are exclusions honored (e.g., no broccoli, vegetarian)?
+- Example: `assert NoExcludedIngredients(order, UserExclusions)`
+
+**Layer 8 - Mathematical Correctness** (Arithmetic):
+- Are calculations correct (price, tax, discount, totals)?
+- Are sums and products accurate?
+- Are financial computations precise?
+- Example: `assert TotalPrice == UnitPrice * Quantity + Tax`
+
+**Layer 9 - Spatial/Geographic Validation** (Location Logic):
+- Are distances feasible?
+- Are coordinates valid?
+- Are location-based constraints satisfied?
+- Example: `assert Distance(UserLocation, Store) <= MaxDistance`

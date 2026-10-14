@@ -1,0 +1,23 @@
+{
+  "experiment": "cross_verifier",
+  "samples": "samples.jsonl",
+  "labels": "labels.json",
+  "methods": [
+    "hybrid",
+    "semantic_only"
+  ],
+  "verifiers": [
+    {
+      "id": "judge_a",
+      "base_url_env": "JUDGE_A_BASE_URL",
+      "model_env": "JUDGE_A_MODEL",
+      "api_key_env": "JUDGE_A_API_KEY"
+    },
+    {
+      "id": "judge_b",
+      "base_url_env": "JUDGE_B_BASE_URL",
+      "model_env": "JUDGE_B_MODEL",
+      "api_key_env": "JUDGE_B_API_KEY"
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+# Preserve extracted prompt strings and generated prompt examples byte-for-byte.
+prompts/*.txt -whitespace
+examples/rendered_prompts/*.txt -whitespace

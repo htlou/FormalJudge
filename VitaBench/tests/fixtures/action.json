@@ -1,0 +1,44 @@
+{
+  "example_origin": "test_fixture",
+  "task_id": "fixture-hotel-001",
+  "user_intent": "Book a hotel with check-in on 2026-11-10.",
+  "content": "",
+  "tool_calls": [
+    {
+      "name": "fixture_book_hotel",
+      "arguments": {
+        "hotel_id": "fixture-hotel-A",
+        "check_in": "2026-11-11"
+      }
+    }
+  ],
+  "history": [
+    {
+      "role": "user",
+      "content": "Please use 2026-11-10 as the check-in date."
+    }
+  ],
+  "task_scenario": "Synthetic hotel booking example",
+  "tool_definitions": [
+    {
+      "name": "fixture_book_hotel",
+      "description": "Illustrative booking action; this package does not execute it.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "hotel_id": {
+            "type": "string"
+          },
+          "check_in": {
+            "type": "string",
+            "description": "ISO date requested for check-in"
+          }
+        },
+        "required": [
+          "hotel_id",
+          "check_in"
+        ]
+      }
+    }
+  ]
+}

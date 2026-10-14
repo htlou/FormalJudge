@@ -1,0 +1,17 @@
+{
+  "experiment": "multi_agent",
+  "samples": "samples.jsonl",
+  "labels": "labels.json",
+  "methods": [
+    "hybrid",
+    "semantic_only"
+  ],
+  "verifiers": [
+    {
+      "id": "judge",
+      "base_url_env": "FORMALJUDGE_BASE_URL",
+      "model_env": "FORMALJUDGE_MODEL",
+      "api_key_env": "FORMALJUDGE_API_KEY"
+    }
+  ]
+}

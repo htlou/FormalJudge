@@ -1,0 +1,33 @@
+{
+  "examples": [
+    {
+      "sample_id": "gpt-4o_10806004_0",
+      "task_id": "10806004",
+      "source_agent": "gpt-4o",
+      "action_index": 0,
+      "tool_name": "get_date_holiday_info"
+    },
+    {
+      "sample_id": "gpt-4o_10807004_0",
+      "task_id": "10807004",
+      "source_agent": "gpt-4o",
+      "action_index": 0,
+      "tool_name": "get_date_holiday_info"
+    },
+    {
+      "sample_id": "claude-sonnet-4-5-20250929_10806004_0",
+      "task_id": "10806004",
+      "source_agent": "claude-sonnet-4-5-20250929",
+      "action_index": 0,
+      "tool_name": "get_holiday_date"
+    },
+    {
+      "sample_id": "claude-sonnet-4-5-20250929_10807004_0",
+      "task_id": "10807004",
+      "source_agent": "claude-sonnet-4-5-20250929",
+      "action_index": 0,
+      "tool_name": "delivery_product_search_recommend"
+    }
+  ],
+  "action_example": "claude-sonnet-4-5-20250929_10807004_0"
+}
